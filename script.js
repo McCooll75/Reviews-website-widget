@@ -38,9 +38,15 @@ function show(string, review){
 }
 
 function altro(review){
-    if(review.getElementsByClassName("text")[0].offsetHeight >= 65){
+    if(change==6){
+        var limit = 65
+    }
+    if(change==3){
+        var limit = 43
+    }
+    if(review.getElementsByClassName("text")[0].offsetHeight >= limit){
         original_string = review.getElementsByClassName("text")[0].innerHTML;
-        while(review.getElementsByClassName("text")[0].offsetHeight >= 65){
+        while(review.getElementsByClassName("text")[0].offsetHeight >= limit){
             review.getElementsByClassName("text")[0].innerHTML = removeLastWord(review.getElementsByClassName("text")[0].innerHTML) + "...";
         }
         review.getElementsByClassName("altro")[0].style.display = "block";

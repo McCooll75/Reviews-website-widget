@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <style>
+      body {
+        font: 400 normal 15px/1.3 -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+        overflow: hidden;
+      }
+      .content {
+        background-color: rgb(243,243,243);
+        border-radius: 15px;
+        padding: 15px;
+        margin: 7px;
+        width: 300px;
+        min-height: 210px;
+        position: relative;
+      }
+      .headers {
+        display: flex;
+        margin-bottom: 7px;
+      }
+      .star {
+        height: 15px;
+        width: 15px;
+        display: inline-block;
+      }
+      .name {
+        display: flex; 
+        font-size: 14px;
+        font-weight: 700;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+        color: rgb(17, 17, 17);
+        margin-bottom: 5px;
+      }
+      .avatar {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 36px;
+        height: 36px;
+      }
+      .text {
+        font-size: 16px;
+      }
+      .time {
+        margin-left: 5px;
+        font-size: 12px;
+        color: rgb(202, 191, 191);
+      }
+      .google {
+        margin-top: 10px;
+        min-width: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 2.17;
+        color: rgba(17, 17, 17, 0.5);
+      }
+      .line {
+        display: flex;
+      }
+      .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arrow:hover{
+        cursor: pointer;
+      }
+      .flip {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+      .altro{
+        color: #1a73e8;
+        font-weight: bold;
+        display: none;
+      }
+      .altro:hover{
+        cursor: pointer;
+      }
+      @media screen and (max-width:980px) {
+        .content{
+          margin-right: 5px;
+          width: 245px;
+        }
+      }
+      @media screen and (max-width:720px) {
+        .content{
+          width: 92%;
+          margin-left: 0px;
+          /* min-height: 150px; */
+        }
+        .line {
+          display: block;
+        }
+        .comp{
+          display: none;
+        }
+        .arrow{
+          -webkit-transform:rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+        .flip{
+          -webkit-transform:rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+        }
+      }
+      @media screen and (min-width:720px) {
+        .arrow {
+          position: relative;
+        }
+        .arrow-img {
+          position: absolute;
+          bottom: -20px;
+          left: -10px;
+        }
+        .line {
+          padding-left: 23px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line">
+      <div class="arrow flip" onclick="movement(-1)">
+        <img src="https://img.icons8.com/cotton/344/ffffff/circled-chevron-right--v1.png" style="width: 40px; height: 40px; color: beige;" class="arrow-img">
+      </div>
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+
+      
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+      
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+      
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+      <div class="arrow" onclick="movement(1)">
+        <img src="https://img.icons8.com/cotton/344/ffffff/circled-chevron-right--v1.png" style="width: 40px; height: 40px; color: beige;" class="arrow-img">
+      </div>
+    </div>
+    <div class="line comp">
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+      
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+      <div class="content">
+        <div class="headers">
+          <img class="avatar" src="https://v1.iconsearch.ru/uploads/icons/web2/128x128/digg_128x128.png"> 
+          <div>
+            <a class="name" style="text-decoration: none;" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">Name</a>
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/36-arts-graphic-shapes/star.png" class="star">
+            <span class="time"> year ago </span>
+          </div>
+        </div>   
+        
+        <div class="text-content" style="display: block;">
+          <span class="text"> Review </span>
+          <span class="altro"> Altro </span>
+        </div>
+      
+        <a class="link" href="https://www.google.com/maps/place/John+Barber/@45.4779458,9.2072887,15z/data=!4m7!3m6!1s0x4786c783bc43c969:0x8f940d84cc1431f7!8m2!3d45.4720708!4d9.2087999!9m1!1b1?hl=it" style="text-decoration: none;" target="_blank">
+          <div class="google">Posted on Google</div>
+          <img src="https://www.tadviser.ru/images/f/fb/Google_logo_2015.png" width="75" height="26">
+        </a>
+      </div>
+    </div>
+    
+  
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
