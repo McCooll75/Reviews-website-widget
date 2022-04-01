@@ -88,4 +88,3 @@ function movement(add){
         document.getElementsByClassName("arrow")[1].style.display = "none"
     }
 }
-
