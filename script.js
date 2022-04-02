@@ -57,6 +57,14 @@ function altro(review){
 //scroll
 current_iter = -1
 function movement(add){
+    //fix version switch
+    if(window.getComputedStyle(document.getElementsByClassName("comp")[0]).display != "none"){
+        change = 6;
+        console.log("Desktop")
+    } else {
+        change = 3;
+        console.log("Mobile")
+    }
     //current tab
     current_iter += add;
     for(var i = 0; i<change; i++){
@@ -88,3 +96,4 @@ function movement(add){
         document.getElementsByClassName("arrow")[1].style.display = "none"
     }
 }
+
